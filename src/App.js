@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useMemo } from "react";
 import { ChildArea } from "./ChildArea";
 import "./App.css";
 
@@ -12,6 +12,9 @@ export default function App() {
     const onClickOpen = () => setOpen(!open)
 
     const onClickClose = useCallback(() => setOpen(false), [setOpen]) // openが変更になった時のみ動く この場合はfalseにするだけなので[]で良い 変更がない限り再レンダリングされないようにしている
+
+    const temp = useMemo(() => 1 + 3, [])
+    console.log(temp) // 4
 
     return (
         <div className="App">
