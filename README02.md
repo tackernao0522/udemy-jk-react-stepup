@@ -6,6 +6,8 @@
 
 ## レンダリング最適化1 (memo) コンポーネントのmemo化
 
++ `src/ChildArea.jsx`<br>
+
 ```
 import { memo } from "react" // 必要箇所のみ再レンダリングさせるため
 
